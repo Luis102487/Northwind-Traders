@@ -8,3 +8,7 @@ order by order_date desc
 * Employee with most orders processed?
 * Shipper with most orders processed?
 * Shipper tyat make most money
+
+select *
+from luisalva.north_wind_traders.customers
+* What is the city where most order go? What is the country?
