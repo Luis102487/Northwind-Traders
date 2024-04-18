@@ -12,3 +12,12 @@ order by order_date desc
 select *
 from luisalva.north_wind_traders.customers
 * What is the city where most order go? What is the country?
+
+select *
+from luisalva.north_wind_traders.products
+* Top 5 selling products? Most selling products? 
+* Company that spend the most?
+* Yearly revenue
+* Monthly revenue
+
+
