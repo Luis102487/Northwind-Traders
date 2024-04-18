@@ -1,23 +1,16 @@
-select *
-from luisalva.north_wind_traders.orders
-order by order_date desc
-
 * How many order per month? Month with most orders
 * How many order haven't shipped yet
 * Company with most orders? top 5
 * Employee with most orders processed?
 * Shipper with most orders processed?
 * Shipper tyat make most money
-
-select *
-from luisalva.north_wind_traders.customers
 * What is the city where most order go? What is the country?
-
-select *
-from luisalva.north_wind_traders.products
 * Top 5 selling products? Most selling products? 
 * Company that spend the most?
 * Yearly revenue
 * Monthly revenue
-
+* Top 5 expensiest order? 
+* Order with quantity ordered?
+* Most selling category
+* Least selling category
 
