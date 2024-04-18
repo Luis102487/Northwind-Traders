@@ -1,2 +1,4 @@
-select *
-from luisalva.north_wind_traders.orders
+SELECT
+  *
+FROM
+  luisalva.north_wind_traders.orders
