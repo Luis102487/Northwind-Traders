@@ -1,1 +1,2 @@
-
+select *
+from luisalva.north_wind_traders.orders
