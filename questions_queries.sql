@@ -17,9 +17,22 @@ FROM
 WHERE
   shipped_date IS NULL
 
+-- Orders by Company. Top 5 companies with the most orders
+SELECT
+  c.company_name,
+  COUNT(o.order_id) AS order_count
+FROM
+  luisalva.north_wind_traders.orders o
+JOIN
+  luisalva.north_wind_traders.customers c
+ON
+  o.customer_id = c.customer_id
+GROUP BY
+  c.company_name
+ORDER BY
+  order_count DESC 
 
 
-Company with most orders? top 5
 Employee with most orders processed?
 Shipper with most orders processed?
 Shipper tyat make most money
