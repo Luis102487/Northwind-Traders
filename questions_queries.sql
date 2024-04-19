@@ -33,14 +33,25 @@ ORDER BY
   order_count DESC  
 
 -- Total cost per order. Top 5 expesive orders.
-SELECT c.company_name, o.order_id, round(sum(od.unit_price * od.quantity), 2) as order_total_cost
-FROM luisalva.north_wind_traders.customers c
-JOIN luisalva.north_wind_traders.orders o
-ON o.customer_id = c.customer_id
-join luisalva.north_wind_traders.order_details od
-on od.order_id = o.order_id 
-group by o.order_id, c.company_name
-order by order_total_cost desc
+SELECT
+  c.company_name,
+  o.order_id,
+  ROUND(SUM(od.unit_price * od.quantity), 2) AS order_total_cost
+FROM
+  luisalva.north_wind_traders.customers c
+JOIN
+  luisalva.north_wind_traders.orders o
+ON
+  o.customer_id = c.customer_id
+JOIN
+  luisalva.north_wind_traders.order_details od
+ON
+  od.order_id = o.order_id
+GROUP BY
+  o.order_id,
+  c.company_name
+ORDER BY
+  order_total_cost DESC
 
   
 Employee with most orders processed?
