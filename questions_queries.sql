@@ -101,8 +101,8 @@ Shipper with most orders processed?
 Shipper tyat make most money
 What is the city where most order go? What is the country?
 Top 5 selling products? Most selling products?
-Yearly revenue
-Monthly revenue
+Revenue by year
+Revenue by month
 Order with most quantity ordered?
 Most selling category
 Least selling category
