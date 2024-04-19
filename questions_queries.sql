@@ -42,6 +42,6 @@ Company that spend the most?
 Yearly revenue
 Monthly revenue
 Top 5 expensiest order?
-Order with quantity ordered?
+Order with most quantity ordered?
 Most selling category
 Least selling category
