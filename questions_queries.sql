@@ -96,13 +96,17 @@ GROUP BY
 ORDER BY
   total_spend DESC
   
-Employee with most orders processed?
-Shipper with most orders processed?
-Shipper tyat make most money
-What is the city where most order go? What is the country?
+
+
+
+
 Top 5 selling products? Most selling products?
 Revenue by year
 Revenue by month
 Order with most quantity ordered?
+What is the city where most order go? What is the country?
 Most selling category
 Least selling category
+Employee with most orders processed?
+Shipper with most orders processed?
+Shipper tyat make most money
