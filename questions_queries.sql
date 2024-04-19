@@ -17,7 +17,7 @@ FROM
 WHERE
   shipped_date IS NULL
 
--- Orders by Company. Top 5 companies with the most orders
+-- Total orders by Company. Top 5 companies with the most orders
 SELECT
   c.company_name,
   COUNT(o.order_id) AS order_count
@@ -32,7 +32,17 @@ GROUP BY
 ORDER BY
   order_count DESC  
 
+-- Total cost per order. Top 5 expesive orders.
+SELECT c.company_name, o.order_id, round(sum(od.unit_price * od.quantity), 2) as order_total_cost
+FROM luisalva.north_wind_traders.customers c
+JOIN luisalva.north_wind_traders.orders o
+ON o.customer_id = c.customer_id
+join luisalva.north_wind_traders.order_details od
+on od.order_id = o.order_id 
+group by o.order_id, c.company_name
+order by order_total_cost desc
 
+  
 Employee with most orders processed?
 Shipper with most orders processed?
 Shipper tyat make most money
