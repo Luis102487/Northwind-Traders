@@ -306,7 +306,6 @@ ORDER BY
 LIMIT
   1;
 
-
-how many iteam have been discounted 
+ 
 Shipper with most orders processed?
 Shipper that make most money
