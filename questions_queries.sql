@@ -276,7 +276,6 @@ SELECT
         luisalva.north_wind_traders.order_details)) * 100, 2) AS percentage_discounted;
 
 
-
+How much money has the company discpunted so far?
 Shipper with most orders processed?
-Shipper tyat make most money
-Order with most quantity ordered?
+Shipper that make most money
