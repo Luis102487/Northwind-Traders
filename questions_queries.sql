@@ -132,7 +132,27 @@ ORDER BY
 LIMIT
   5;
 
-Revenue by year
+
+-- Revenue by year
+SELECT
+  EXTRACT(year
+  FROM
+    o.order_date) AS order_year,
+  ROUND(SUM(od.quantity * p.unit_price)) AS revenue
+FROM
+  luisalva.north_wind_traders.orders o
+JOIN
+  luisalva.north_wind_traders.order_details od
+ON
+  o.order_id = od.order_id
+JOIN
+  luisalva.north_wind_traders.products p
+ON
+  od.product_id = p.product_id
+GROUP BY
+  order_year
+
+  
 Revenue by month
 Order with most quantity ordered?
 What is the city where most order go? What is the country?
