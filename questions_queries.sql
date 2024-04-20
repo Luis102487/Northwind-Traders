@@ -153,7 +153,7 @@ GROUP BY
   order_year
 
   
-Revenue by month
+
 Order with most quantity ordered?
 What is the city where most order go? What is the country?
 Most selling category
