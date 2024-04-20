@@ -278,14 +278,35 @@ SELECT
 
 -- What is the amount the company has discounted so far?
 SELECT
-  ROUND(SUM((unit_price * discount)), 2) AS discounted_total
+  ROUND(SUM((unit_price * discount)), 2) AS total_discounted
 FROM
   luisalva.north_wind_traders.order_details
 WHERE
   discount > 0;
 
 
-what is the company tyat has received the most discount so far?
+-- What company has received the most discount so far?
+SELECT
+  c.company_name,
+  ROUND(SUM((od.unit_price * od.discount)), 2) AS total_discounted
+FROM
+  luisalva.north_wind_traders.customers c
+JOIN
+  luisalva.north_wind_traders.orders o
+ON
+  c.customer_id = o.customer_id
+JOIN
+  luisalva.north_wind_traders.order_details od
+ON
+  o.order_id = od.order_id
+GROUP BY
+  c.company_name
+ORDER BY
+  total_discounted DESC
+LIMIT
+  1;
+
+
 how many iteam have been discounted 
 Shipper with most orders processed?
 Shipper that make most money
