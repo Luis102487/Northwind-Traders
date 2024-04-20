@@ -184,6 +184,23 @@ GROUP BY
 ORDER BY
   order_count DESC;
 
+  -- Most selling category by products
+SELECT
+  c.category_name,
+  SUM(od.quantity)
+FROM
+  luisalva.north_wind_traders.categories c
+JOIN
+  luisalva.north_wind_traders.products p
+ON
+  c.category_id = p.category_id
+JOIN
+  luisalva.north_wind_traders.order_details od
+ON
+  p.product_id = od.product_id
+GROUP BY
+  c.category_name
+
 Most selling category
 Least selling category
 Employee with most orders processed?
