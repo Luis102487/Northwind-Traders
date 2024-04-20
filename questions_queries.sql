@@ -223,6 +223,31 @@ GROUP BY
 ORDER BY
   order_count DESC;
 
+-- Top 5 employess that bring the most revenue to the company.
+SELECT
+  e.employee_name,
+  ROUND(SUM((od.quantity * p.unit_price)), 2) AS total_revenue
+FROM
+  luisalva.north_wind_traders.orders o
+JOIN
+  luisalva.north_wind_traders.order_details od
+ON
+  o.order_id = od.order_id
+JOIN
+  luisalva.north_wind_traders.products p
+ON
+  od.product_id = p.product_id
+JOIN
+  luisalva.north_wind_traders.employees e
+ON
+  o.employee_id = e.employee_id
+GROUP BY
+  e.employee_name
+ORDER BY
+  total_revenue DESC
+LIMIT
+  5;
+
 
 -- Percentage of discounted orders
 SELECT
@@ -250,7 +275,8 @@ SELECT
       FROM
         luisalva.north_wind_traders.order_details)) * 100, 2) AS percentage_discounted;
 
-Employess that make the most money for the company.
+
+
 Shipper with most orders processed?
 Shipper tyat make most money
 Order with most quantity ordered?
