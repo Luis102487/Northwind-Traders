@@ -184,10 +184,10 @@ GROUP BY
 ORDER BY
   order_count DESC;
 
-  -- Most selling category by products
+-- Total products sold by category
 SELECT
   c.category_name,
-  SUM(od.quantity)
+  SUM(od.quantity) AS sold_count
 FROM
   luisalva.north_wind_traders.categories c
 JOIN
@@ -200,9 +200,10 @@ ON
   p.product_id = od.product_id
 GROUP BY
   c.category_name
+ORDER BY 
+  sold_count DESC;
 
-Most selling category
-Least selling category
+
 Employee with most orders processed?
 Shipper with most orders processed?
 Shipper tyat make most money
