@@ -1,4 +1,4 @@
--- How many orders per month? Months with most orders
+-- How many orders per month? Months with most orders.
 SELECT
   EXTRACT(YEAR_MONTH FROM order_date) AS order_month,
   COUNT(order_id) order_count
@@ -19,7 +19,7 @@ WHERE
   shipped_date IS NULL
 
   
--- Total orders by Company. Top 5 companies with the most orders
+-- Total orders by Company. Top 5 companies with the most orders.
 SELECT
   c.company_name,
   COUNT(o.order_id) AS order_count
@@ -77,7 +77,7 @@ ORDER BY
   total_quantity_ordered DESC
 
   
--- Total money spent by each company? Top 5 companies with more money spent
+-- Total money spent by each company? Top 5 companies with more money spent.
 SELECT
   c.company_name,
   ROUND(SUM(od.unit_price * od.quantity), 2) AS total_spend
@@ -133,7 +133,7 @@ LIMIT
   5;
 
 
--- Revenue by year
+-- Revenue by year.
 SELECT
   EXTRACT(year
   FROM
@@ -167,8 +167,22 @@ GROUP BY
   c.country
 ORDER BY
   order_count DESC; 
-  
 
+
+-- Orders per city.
+SELECT
+  c.city,
+  COUNT(c.city) AS order_count
+FROM
+  luisalva.north_wind_traders.orders o
+JOIN
+  luisalva.north_wind_traders.customers c
+ON
+  o.customer_id = c.customer_id
+GROUP BY
+  c.city
+ORDER BY
+  order_count DESC;
 
 Most selling category
 Least selling category
