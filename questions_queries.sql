@@ -276,6 +276,15 @@ SELECT
         luisalva.north_wind_traders.order_details)) * 100, 2) AS percentage_discounted;
 
 
+-- What is the amount the company has discounted so far?
+SELECT
+  ROUND(SUM((unit_price * discount)), 2) AS discounted_total
+FROM
+  luisalva.north_wind_traders.order_details
+WHERE
+  discount > 0;
+
+
 what is the company tyat has received the most discount so far?
 how many iteam have been discounted 
 Shipper with most orders processed?
