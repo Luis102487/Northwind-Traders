@@ -102,11 +102,11 @@ SELECT
   p.product_name,
   SUM(od.quantity) AS units_sold
 FROM
-  luisalva.north_wind_traders.order_details od
-JOIN
   luisalva.north_wind_traders.products p
+JOIN
+  luisalva.north_wind_traders.order_details od
 ON
-  od.product_id = p.product_id
+  p.product_id = od.product_id
 GROUP BY
   p.product_name
 ORDER BY
