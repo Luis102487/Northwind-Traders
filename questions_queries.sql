@@ -97,7 +97,7 @@ ORDER BY
   total_spend DESC
 
   
--- What are the top 5 selling products?
+-- What are the top 5 selling products by quantity?
 SELECT
   p.product_name,
   SUM(od.quantity) AS units_sold
@@ -116,7 +116,7 @@ LIMIT
 
 
 
-Top 5 selling products? Most selling products?
+What are the top 5 products that bring the most revenue?
 Revenue by year
 Revenue by month
 Order with most quantity ordered?
