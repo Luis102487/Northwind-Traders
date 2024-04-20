@@ -204,7 +204,26 @@ ORDER BY
   sold_count DESC;
 
 
-Employee with most orders processed?
+-- Orders processed by employee.
+SELECT
+  e.employee_name,
+  e.title,
+  e.city,
+  COUNT(o.order_id) AS order_count
+FROM
+  luisalva.north_wind_traders.employees e
+JOIN
+  luisalva.north_wind_traders.orders o
+ON
+  o.employee_id = e.employee_id
+GROUP BY
+  e.employee_name,
+  e.title,
+  e.city
+ORDER BY
+  order_count DESC;
+
+
 Shipper with most orders processed?
 Shipper tyat make most money
 Order with most quantity ordered?
