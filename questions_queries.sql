@@ -223,7 +223,7 @@ GROUP BY
 ORDER BY
   order_count DESC;
 
-
+Employess that make the most money for the company.
 Shipper with most orders processed?
 Shipper tyat make most money
 Order with most quantity ordered?
