@@ -150,11 +150,26 @@ JOIN
 ON
   od.product_id = p.product_id
 GROUP BY
-  order_year
+  order_year;
 
+
+-- Orders per country.
+SELECT
+  c.country,
+  COUNT(c.country) AS order_count
+FROM
+  luisalva.north_wind_traders.orders o
+JOIN
+  luisalva.north_wind_traders.customers c
+ON
+  o.customer_id = c.customer_id
+GROUP BY
+  c.country
+ORDER BY
+  order_count DESC; 
   
 
-What is the city where most order go? What is the country?
+
 Most selling category
 Least selling category
 Employee with most orders processed?
