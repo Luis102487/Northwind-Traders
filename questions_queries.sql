@@ -154,10 +154,10 @@ GROUP BY
 
   
 
-Order with most quantity ordered?
 What is the city where most order go? What is the country?
 Most selling category
 Least selling category
 Employee with most orders processed?
 Shipper with most orders processed?
 Shipper tyat make most money
+Order with most quantity ordered?
