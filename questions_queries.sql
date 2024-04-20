@@ -223,6 +223,33 @@ GROUP BY
 ORDER BY
   order_count DESC;
 
+
+-- Percentage of discounted orders
+SELECT
+  (
+  SELECT
+    COUNT(*)
+  FROM
+    luisalva.north_wind_traders.order_details) AS total_orders,
+  (
+  SELECT
+    COUNT(*)
+  FROM
+    luisalva.north_wind_traders.order_details
+  WHERE
+    discount > 0) AS discounted_orders,
+  ROUND(((
+      SELECT
+        COUNT(*)
+      FROM
+        luisalva.north_wind_traders.order_details
+      WHERE
+        discount > 0)/ (
+      SELECT
+        COUNT(*)
+      FROM
+        luisalva.north_wind_traders.order_details)) * 100, 2) AS percentage_discounted;
+
 Employess that make the most money for the company.
 Shipper with most orders processed?
 Shipper tyat make most money
