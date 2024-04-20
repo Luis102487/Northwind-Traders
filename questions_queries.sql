@@ -306,6 +306,21 @@ ORDER BY
 LIMIT
   1;
 
+
+-- Shipper with most orders processed?
+SELECT
+  s.company_name,
+  COUNT(o.order_id) AS order_count
+FROM
+  luisalva.north_wind_traders.shippers s
+JOIN
+  luisalva.north_wind_traders.orders o
+ON
+  s.shipper_id = o.shipper_id
+GROUP BY
+  s.company_name
+ORDER BY
+  order_count DESC;
  
-Shipper with most orders processed?
+
 Shipper that make most money
