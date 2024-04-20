@@ -115,8 +115,23 @@ LIMIT
   5;
 
 
+-- What are the top 5 products that bring the most revenue?
+SELECT
+  p.product_name,
+  ROUND(SUM(p.unit_price * od.quantity), 2) AS product_cost
+FROM
+  luisalva.north_wind_traders.products p
+JOIN
+  luisalva.north_wind_traders.order_details od
+ON
+  p.product_id = od.product_id
+GROUP BY
+  p.product_name
+ORDER BY
+  product_cost DESC
+LIMIT
+  5;
 
-What are the top 5 products that bring the most revenue?
 Revenue by year
 Revenue by month
 Order with most quantity ordered?
