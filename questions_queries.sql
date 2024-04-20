@@ -77,7 +77,7 @@ ORDER BY
   total_quantity_ordered DESC
 
   
---Total money spent by each company? Top 5 companies with more money spent
+-- Total money spent by each company? Top 5 companies with more money spent
 SELECT
   c.company_name,
   ROUND(SUM(od.unit_price * od.quantity), 2) AS total_spend
@@ -95,8 +95,24 @@ GROUP BY
   c.company_name
 ORDER BY
   total_spend DESC
-  
 
+  
+-- What are the top 5 selling products?
+SELECT
+  p.product_name,
+  SUM(od.quantity) AS units_sold
+FROM
+  luisalva.north_wind_traders.order_details od
+JOIN
+  luisalva.north_wind_traders.products p
+ON
+  od.product_id = p.product_id
+GROUP BY
+  p.product_name
+ORDER BY
+  units_sold DESC
+LIMIT
+  5;
 
 
 
