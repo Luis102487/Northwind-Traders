@@ -1,16 +1,10 @@
-* How many order per month? Month with most orders
-* How many order haven't shipped yet
-* Company with most orders? top 5
-* Employee with most orders processed?
-* Shipper with most orders processed?
-* Shipper tyat make most money
-* What is the city where most order go? What is the country?
-* Top 5 selling products? Most selling products? 
-* Company that spend the most?
-* Yearly revenue
-* Monthly revenue
-* Top 5 expensiest order? 
-* Order with quantity ordered?
-* Most selling category
-* Least selling category
+For the Maven Northwind Challenge, you'll be working as a BI Developer for Northwind Traders, a global import and export company that specializes in supplying high-quality gourmet food products to restaurants, cafes, and specialty food retailers around the world.
+
+As part of your role, you've been tasked with building a top-level KPI dashboard for the executive team. Its purpose should be to allow them to quickly understand the company's performance in key areas, including:
+
+Sales trends
+Product performance
+Key customers
+Shipping costs
+The dashboard should be built to evolve and accommodate new data over time, but you've been encouraged by your manager to have insights & recommendations ready to share with the VPs. This is your chance to impress!
 
