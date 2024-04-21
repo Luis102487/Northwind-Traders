@@ -223,6 +223,7 @@ GROUP BY
 ORDER BY
   order_count DESC;
 
+
 -- Top 5 employess that bring the most revenue to the company.
 SELECT
   e.employee_name,
