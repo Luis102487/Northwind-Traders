@@ -308,7 +308,7 @@ LIMIT
   1;
 
 
--- Shiping provider with most orders delivered?
+-- Shipping provider with most orders delivered?
 SELECT
   s.company_name,
   COUNT(o.order_id) AS order_count
@@ -336,5 +336,21 @@ ON
   s.shipper_id = o.shipper_id
 GROUP BY
   s.company_name
+ORDER BY
+  total_freight DESC;
+
+
+-- Freight total by customer
+SELECT
+  c.company_name,
+  ROUND(SUM(o.freight), 2) AS total_freight
+FROM
+  luisalva.north_wind_traders.customers c
+JOIN
+  luisalva.north_wind_traders.orders o
+ON
+  c.customer_id = o.customer_id
+GROUP BY
+  c.company_name
 ORDER BY
   total_freight DESC;
