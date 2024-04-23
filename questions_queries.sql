@@ -1,4 +1,29 @@
--- How many orders per month? Months with most orders.
+-- Total Orders
+SELECT
+  COUNT(DISTINCT order_id) AS total_orders
+FROM
+  luisalva.north_wind_traders.orders;
+
+
+-- Total Sales
+SELECT
+  ROUND(SUM((od.unit_price * od.quantity)), 2) AS sales_total
+FROM
+  luisalva.north_wind_traders.orders o
+JOIN
+  luisalva.north_wind_traders.order_details od
+ON
+  o.order_id = od.order_id;
+
+
+-- Total Customers
+SELECT
+  COUNT(DISTINCT customer_id) AS total_customers
+FROM
+  luisalva.north_wind_traders.customers;
+
+
+-- Orders per Month 
 SELECT
   EXTRACT(YEAR_MONTH FROM order_date) AS order_month,
   COUNT(order_id) order_count
@@ -10,13 +35,20 @@ ORDER BY
   order_month DESC;
 
 
--- What orders haven't shipped yet?
+-- Sales per Month
 SELECT
-  *
+  EXTRACT(YEAR_MONTH FROM o.order_date) AS order_month,
+  ROUND(SUM(od.unit_price * od.quantity), 2) AS total_sales
 FROM
-  luisalva.north_wind_traders.orders
-WHERE
-  shipped_date IS NULL
+  luisalva.north_wind_traders.orders o
+JOIN
+  luisalva.north_wind_traders.order_details od
+ON
+  o.order_id = od.order_id
+GROUP BY
+  order_month
+ORDER BY
+  order_month DESC;
 
   
 -- Total orders by Company. Top 5 companies with the most orders.
@@ -138,7 +170,7 @@ SELECT
   EXTRACT(year
   FROM
     o.order_date) AS order_year,
-  ROUND(SUM(od.quantity * p.unit_price)) AS revenue
+    ROUND(SUM(od.quantity * p.unit_price)) AS revenue
 FROM
   luisalva.north_wind_traders.orders o
 JOIN
