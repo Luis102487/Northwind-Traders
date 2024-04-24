@@ -282,6 +282,13 @@ FROM
   luisalva.north_wind_traders.orders;
 
 
+-- Average transportation cost.
+SELECT
+  ROUND(SUM(freight)/COUNT(order_id), 2) AS average_cost
+FROM
+  luisalva.north_wind_traders.orders;
+
+
 -- Transportation provider with most orders delivered.
 SELECT
   s.company_name,
