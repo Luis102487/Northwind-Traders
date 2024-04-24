@@ -348,6 +348,5 @@ ORDER BY
   total_freight DESC;
 
 
-average shipping cost
-average order
-average sale
+
+average item ordered
