@@ -23,6 +23,17 @@ FROM
   luisalva.north_wind_traders.customers;
 
 
+-- Average order cost.
+SELECT
+  ROUND(SUM(od.unit_price * od.quantity)/COUNT(o.order_id), 2) AS average_order_cost
+FROM
+  luisalva.north_wind_traders.orders o
+JOIN
+  luisalva.north_wind_traders.order_details od
+ON
+  o.order_id = od.order_id;
+
+
 -- Orders per Month 
 SELECT
   EXTRACT(YEAR_MONTH FROM order_date) AS order_month,
