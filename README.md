@@ -15,7 +15,7 @@ To perfom this analysis I will use the sales and orders database for Northwind T
 
 ## Questions to Answer
 
-The following questions to wil help us understand the company's performance in the key areas previously mentioned.
+The following questions will help us understand the company's performance in the key areas previously mentioned.
 * Total orders
 * Total sales
 * Total customers
