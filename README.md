@@ -40,6 +40,4 @@ To perfom this analysis I will use the sales and orders database for Northwind T
 * Freight total by transportation provider
 * Freight total by customer
 
-
-
-
+For the queries that answer the above questions, check the [question_queries](https://github.com/Luis102487/Northwind-Traders/blob/main/questions_queries.sql) file.
