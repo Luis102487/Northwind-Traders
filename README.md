@@ -42,4 +42,4 @@ The following questions to wil help us understand the company's performance in t
 * Freight total by transportation provider
 * Freight total by customer
 
-For the queries that answer these questions, check the [SQL_queries](https://github.com/Luis102487/Northwind-Traders/blob/main/questions_queries.sql) file.
+For the SQL queries that answer these questions, check the [SQL_queries](https://github.com/Luis102487/Northwind-Traders/blob/main/questions_queries.sql) file.
