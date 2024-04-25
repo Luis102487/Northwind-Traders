@@ -34,6 +34,13 @@ ON
   o.order_id = od.order_id;
 
 
+-- Average items per order
+SELECT
+  ROUND(SUM(quantity)/COUNT(DISTINCT order_id), 2)
+FROM
+  luisalva.north_wind_traders.order_details;
+
+
 -- Orders per Month 
 SELECT
   EXTRACT(YEAR_MONTH FROM order_date) AS order_month,
