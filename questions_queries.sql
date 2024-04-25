@@ -76,7 +76,7 @@ FROM
   luisalva.north_wind_traders.orders
 
   
--- Orders by customer. 
+-- Orders by customer 
 SELECT
   c.company_name,
   COUNT(o.order_id) AS order_count
