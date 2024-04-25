@@ -1,11 +1,11 @@
--- Total Orders
+-- Total orders
 SELECT
   COUNT(DISTINCT order_id) AS total_orders
 FROM
   luisalva.north_wind_traders.orders;
 
 
--- Total Sales
+-- Total sales
 SELECT
   ROUND(SUM((od.unit_price * od.quantity)), 2) AS sales_total
 FROM
@@ -16,14 +16,14 @@ ON
   o.order_id = od.order_id;
 
 
--- Total Customers
+-- Total customers
 SELECT
   COUNT(DISTINCT customer_id) AS total_customers
 FROM
   luisalva.north_wind_traders.customers;
 
 
--- Average order cost.
+-- Average order cost
 SELECT
   ROUND(SUM(od.unit_price * od.quantity)/COUNT(o.order_id), 2) AS average_order_cost
 FROM
@@ -41,7 +41,7 @@ FROM
   luisalva.north_wind_traders.order_details;
 
 
--- Orders per Month 
+-- Orders per month 
 SELECT
   EXTRACT(YEAR_MONTH FROM order_date) AS order_month,
   COUNT(order_id) order_count
@@ -53,7 +53,7 @@ ORDER BY
   order_month DESC;
 
 
--- Sales per Month
+-- Sales per month
 SELECT
   EXTRACT(YEAR_MONTH FROM o.order_date) AS order_month,
   ROUND(SUM(od.unit_price * od.quantity), 2) AS total_sales
@@ -69,14 +69,14 @@ ORDER BY
   order_month DESC;
 
 
--- How many customers have order so far?
+-- How many customers does Northwind Trader has so far?
 SELECT
   COUNT(DISTINCT customer_id) AS total_customers
 FROM
   luisalva.north_wind_traders.orders
 
   
--- Orders by Customer. 
+-- Orders by customer. 
 SELECT
   c.company_name,
   COUNT(o.order_id) AS order_count
@@ -92,7 +92,7 @@ ORDER BY
   order_count DESC 
 
 
--- Sales by Customer.
+-- Sales by customer
 SELECT
   c.company_name,
   ROUND(SUM(od.unit_price * od.quantity), 2) AS total_spend
@@ -112,7 +112,7 @@ ORDER BY
   total_spend DESC
 
   
--- Cost per Order. 
+-- Cost per order 
 SELECT
   c.company_name,
   o.order_id,
@@ -134,7 +134,7 @@ ORDER BY
   order_total_cost DESC
 
   
---Top 5 selling products by quantity.
+--Top 5 selling products by quantity
 SELECT
   p.product_name,
   SUM(od.quantity) AS units_sold
@@ -152,7 +152,7 @@ LIMIT
   5;
 
 
--- Top 5 products that bring the most revenue.
+-- Top 5 products that bring the most revenue
 SELECT
   p.product_name,
   ROUND(SUM(p.unit_price * od.quantity), 2) AS product_cost
@@ -190,7 +190,7 @@ ORDER BY
   sold_count DESC;
 
 
--- Countries North Wind Traders deleivers to.
+-- Countries Northwind Traders deleivers to
 SELECT
   COUNT(DISTINCT c.country) AS country_count
 FROM
@@ -201,7 +201,7 @@ ON
   c.customer_id = o.customer_id;
 
 
--- Orders per country.
+-- Orders per country
 SELECT
   c.country,
   COUNT(c.country) AS order_count
@@ -217,7 +217,7 @@ ORDER BY
   order_count DESC; 
 
 
--- Sales per country.
+-- Sales per country
 SELECT
   c.country,
   ROUND((od.unit_price * od.quantity), 2) AS sales_total
@@ -262,7 +262,7 @@ SELECT
         luisalva.north_wind_traders.order_details)) * 100, 2) AS percentage_discounted;
 
 
--- What is the amount the North Wind Tarders has discounted so far?
+-- What is the amount Northwind Traders has discounted so far?
 SELECT
   ROUND(SUM((unit_price * discount)), 2) AS total_discounted
 FROM
@@ -293,21 +293,21 @@ LIMIT
   1;
 
 
--- Total Freight Cost
+-- Total freight cost
 SELECT
   ROUND(SUM(freight), 2) AS total_freight
 FROM
   luisalva.north_wind_traders.orders;
 
 
--- Average transportation cost.
+-- Average transportation cost
 SELECT
   ROUND(SUM(freight)/COUNT(order_id), 2) AS average_cost
 FROM
   luisalva.north_wind_traders.orders;
 
 
--- Transportation provider with most orders delivered.
+-- Transportation provider with most orders delivered
 SELECT
   s.company_name,
   COUNT(o.order_id) AS order_count
@@ -323,7 +323,7 @@ ORDER BY
   order_count DESC;
  
 
--- Freight total by transportation provider.
+-- Freight total by transportation provider
 SELECT
   s.company_name,
   ROUND(SUM(o.freight), 2) AS total_freight
@@ -339,7 +339,7 @@ ORDER BY
   total_freight DESC;
 
 
--- Freight total by customer.
+-- Freight total by customer
 SELECT
   c.company_name,
   ROUND(SUM(o.freight), 2) AS total_freight
