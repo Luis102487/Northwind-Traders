@@ -14,6 +14,8 @@ To perfom this analysis I will use the sales and orders database for Northwind T
 ![image](https://github.com/Luis102487/Northwind-Traders/assets/96627296/56c774b8-d94f-4ba5-9d87-102262de8ff6)
 
 ## Questions to Answer
+
+The following questions to wil help us understand the company's performance in the key areas previously mentioned.
 * Total orders
 * Total sales
 * Total customers
@@ -40,4 +42,4 @@ To perfom this analysis I will use the sales and orders database for Northwind T
 * Freight total by transportation provider
 * Freight total by customer
 
-For the queries that answer the above questions, check the [SQL_queries](https://github.com/Luis102487/Northwind-Traders/blob/main/questions_queries.sql) file.
+For the queries that answer these questions, check the [SQL_queries](https://github.com/Luis102487/Northwind-Traders/blob/main/questions_queries.sql) file.
