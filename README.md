@@ -1,4 +1,5 @@
------------------------------
+# North Wind Traders Data Analysis
+
 Northwind Traders, a global import and export company that specializes in supplying high-quality gourmet food products to restaurants, cafes, and specialty food retailers around the world.
 
 Its purpose should be to allow them to quickly understand the company's performance in key areas, including:
