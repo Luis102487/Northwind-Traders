@@ -15,3 +15,55 @@ To perfom this analysis I will use the sales and orders database for Northwind T
 
 ## Questions to Answer
 
+-- Total Orders
+
+
+
+-- Total Sales
+
+
+
+-- Total Customers
+
+
+
+-- Average order cost.
+
+
+
+-- Average items per order
+
+-- Orders per Month 
+
+
+
+-- Sales per Month
+
+-- How many customers have order so far?
+
+
+
+-- Percentage of discounted orders
+
+
+-- What is the amount the North Wind Tarders has discounted so far?
+
+
+-- What customer has received the most discount so far?
+
+
+-- Total Freight Cost
+
+
+
+-- Average transportation cost.
+
+
+
+-- Transportation provider with most orders delivered.
+ 
+
+-- Freight total by transportation provider.
+
+
+-- Freight total by customer.
