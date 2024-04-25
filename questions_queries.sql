@@ -353,7 +353,3 @@ GROUP BY
   c.company_name
 ORDER BY
   total_freight DESC;
-
-
-
-average item ordered
