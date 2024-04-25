@@ -22,6 +22,7 @@ To perfom this analysis I will use the sales and orders database for Northwind T
 * Orders per month
 * Sales per month
 * How many customers does Northwind Trader has so far?
+* Orders by customer 
 * Sales by customer
 * Cost per order
 * Top 5 selling products by quantity
