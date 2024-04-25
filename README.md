@@ -1,12 +1,15 @@
 # North Wind Traders Data Analysis
 
-Northwind Traders, a global import and export company that specializes in supplying high-quality gourmet food products to restaurants, cafes, and specialty food retailers around the world.
+Northwind Traders, is a global import and export company that specializes in supplying high-quality gourmet food products to restaurants, cafes, and specialty food retailers around the world.
 
-Its purpose should be to allow them to quickly understand the company's performance in key areas, including:
+The purpose of this analysis is understand the company's performance in key areas, including:
 
 * Sales trends
 * Product performance
 * Key customers
 * Shipping costs
-  
-The dashboard should be built to evolve and accommodate new data over time, but you've been encouraged by your manager to have insights & recommendations ready to share with the VPs. This is your chance to impress!
+
+I have been provided with sales and orders data for Northwind Traders, including information on customers, products, orders, shippers, and employees.
+
+![image](https://github.com/Luis102487/Northwind-Traders/assets/96627296/56c774b8-d94f-4ba5-9d87-102262de8ff6)
+
