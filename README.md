@@ -9,7 +9,7 @@ The purpose of this analysis is understand the company's performance in key area
 * Key customers
 * Shipping costs
 
-I have been provided with sales and orders data for Northwind Traders, including information on customers, products, orders, shippers, and employees.
+To perfom this analysis I will use the sales and orders data base for Northwind Traders, including information on customers, products, orders, shippers, and employees.
 
 ![image](https://github.com/Luis102487/Northwind-Traders/assets/96627296/56c774b8-d94f-4ba5-9d87-102262de8ff6)
 
