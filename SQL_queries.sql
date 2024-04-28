@@ -36,7 +36,7 @@ ON
 
 -- Average items per order
 SELECT
-  ROUND(SUM(quantity)/COUNT(DISTINCT order_id), 2)
+  ROUND(SUM(quantity)/COUNT(DISTINCT order_id), 2) AS average_items
 FROM
   luisalva.north_wind_traders.order_details;
 
